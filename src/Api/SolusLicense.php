@@ -16,7 +16,7 @@ class SolusLicense {
      * @return array
      */
     public static function get(): array {
-        return self::getClient()->get('/license');
+        return self::getClient()->get('/solus-license');
     }
 
     /**
@@ -27,8 +27,8 @@ class SolusLicense {
      * @return array
      */
     public static function activate(string $licenseKey): array {
-        return self::getClient()->post('/license/activate', [
-            'license_key' => $licenseKey
+        return self::getClient()->post('/solus-license/activate', [
+            'activation_code' => $licenseKey
         ]);
     }
 
@@ -38,7 +38,7 @@ class SolusLicense {
      * @return array
      */
     public static function refresh(): array {
-        return self::getClient()->post('/license/refresh');
+        return self::getClient()->post('/solus-license/refresh');
     }
 
 }
