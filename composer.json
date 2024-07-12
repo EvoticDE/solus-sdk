@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Evotic\\SolusSdk\\": "src/"
+            "Evotic\\SolusSDK\\": "src/"
         }
     },
     "authors": [
