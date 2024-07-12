@@ -23,3 +23,8 @@ Getting Started
 To get started with the SolusVM API SDK for Laravel, visit Evotic's GitHub repository where you can find installation instructions, documentation, and examples.
 
 This SDK is an invaluable tool for any Laravel developer working with SolusVM who wants to automate their VM management tasks.
+
+## Important Links
+
+- Website from SolusVM: [SolusVM](https://solusvm.com)
+- evotic: [evotic.io](evotic.io)
