@@ -12,6 +12,8 @@ class Projects {
         $this->client = $client;
     }
 
+    // Purely for test purpose right now but it will follow the same structure later on
+
     /**
      * List all projects
      * 
