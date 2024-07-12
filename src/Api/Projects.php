@@ -6,10 +6,8 @@ use Evotic\SolusSDK\SolusClient;
 
 class Projects {
 
-    private $client;
-
-    public function __construct(SolusClient $client) {
-        $this->client = $client;
+    private static function getClient(): SolusClient {
+        return SolusClient::getInstance();
     }
 
     // Purely for test purpose right now but it will follow the same structure later on
@@ -19,8 +17,8 @@ class Projects {
      * 
      * @return array
      */
-    public function list(): array {
-        return $this->client->get('/projects');
+    public static function list(): array {
+        return self::getClient()->get('/projects');
     }
 
 }

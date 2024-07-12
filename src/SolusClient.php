@@ -1,11 +1,14 @@
 <?php
 
 namespace Evotic\SolusSDK;
+use Illuminate\Support\Facades\Config;
 
 /**
  * Handles Communication with SolusVM API
  */
 class SolusClient {
+
+    public static ?SolusClient $instance = null;
 
     public function __construct(
         private string $base_url,
@@ -96,6 +99,16 @@ class SolusClient {
 
     public function delete(string $path): array {
         return $this->request('DELETE', $path);
+    }
+
+    public static function getInstance(): SolusClient {
+        if (self::$instance === null) {
+            self::$instance = new SolusClient(
+                Config::get('solus.base_url'),
+                Config::get('solus.token')
+            );
+        }
+        return self::$instance;
     }
 
 }
