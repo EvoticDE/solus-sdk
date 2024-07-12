@@ -1,8 +1,12 @@
 {
-    "name": "evotic/solus-sdk",
+    "name": "evotic/solussdk",
     "description": "This is a php sdk for the solusvm v2 api",
     "type": "library",
     "license": "Don't Be A Jerk License",
+    "support": {
+        "issues": "https://github.com/evoticde/solus-sdk/issues",
+        "source": "https://github.com/evoticde/solus-sdk"
+    },
     "autoload": {
         "psr-4": {
             "Evotic\\SolusSdk\\": "src/"
@@ -13,7 +17,20 @@
             "name": "Leon Hausdorf"
         }
     ],
+    "require": {
+        "php": "^8.0.2"
+    },
     "require-dev": {
         "orchestra/testbench": "^9.1"
-    }
+    },
+    "conflict": {
+        "laravel/framework": "<9.37.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Evotic\\SolusSDK\\SolusBaseServiceProvider"
+            ]
+        }
+    },
 }
