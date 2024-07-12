@@ -2,6 +2,8 @@
 
 namespace Evotic\SolusSDK;
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Evotic\SolusSDK\SolusClient;
 
