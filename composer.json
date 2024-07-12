@@ -1,6 +1,7 @@
 {
     "name": "evotic/solussdk",
     "description": "This is a php sdk for the solusvm v2 api",
+    "version": "0.0.1",
     "type": "library",
     "license": "Don't Be A Jerk License",
     "support": {

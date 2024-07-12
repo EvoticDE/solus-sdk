@@ -1,6 +1,6 @@
 <?php
 
-namespace Evotic\SolusSDK\Services;
+namespace Evotic\SolusSDK;
 
 /**
  * Handles Communication with SolusVM API
