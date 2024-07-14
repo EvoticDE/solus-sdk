@@ -25,7 +25,7 @@ class SolusProjects {
      * Create a new project
      * 
      * @param string $name
-     * @param string $description Optional. Default is null
+     * @param string|null $description Optional. Default is null
      * 
      * @return array
      */
