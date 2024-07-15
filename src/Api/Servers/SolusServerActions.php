@@ -1,6 +1,7 @@
 <?php
 
 namespace Evotic\SolusSDK\Api\Servers;
+
 use Evotic\SolusSDK\SolusClient;
 
 class SolusServerActions {
