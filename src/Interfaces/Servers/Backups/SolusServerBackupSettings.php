@@ -6,5 +6,6 @@ interface ISolusServerBackupSettings {
 
     public function setBackupEnabled(?bool $enabled): self;
     public function setBackupSchedule(ISolusServerBackupSchedule $schedule): self;
+    public function toArray(): array;
 
 }
