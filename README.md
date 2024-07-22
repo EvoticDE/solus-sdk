@@ -24,6 +24,10 @@ To get started with the SolusVM API SDK for Laravel, visit Evotic's GitHub repos
 
 This SDK is an invaluable tool for any Laravel developer working with SolusVM who wants to automate their VM management tasks.
 
+## License
+
+The SDK is licensed under the "Don't Be A Jerk" license. For further information, please visit the LICENSE.md.
+
 ## Important Links
 
 - Website from SolusVM: [SolusVM](https://solusvm.com)

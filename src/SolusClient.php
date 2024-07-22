@@ -69,6 +69,8 @@ class SolusClient {
                 throw new \Exception('(http-403) access to SolusVM api denied (not enough permissions)');
             case 404:
                 throw new \Exception('(http-404) requested resource not found');
+            case 422:
+                throw new \Exception('(http-422) request data validation failed (probably missing required fields)');
             default:
                 throw new \Exception(json_encode([
                     'response' => $response,
