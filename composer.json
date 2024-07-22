@@ -1,7 +1,7 @@
 {
     "name": "evotic/solus-sdk",
     "description": "This is a php sdk for the solusvm v2 api, designed for Laravel",
-    "version": "1.0.3",
+    "version": "1.0.3-fix",
     "type": "library",
     "license": "MIT",
     "support": {
