@@ -5,7 +5,7 @@ use Evotic\SolusSDK\Interfaces\Servers\ISolusServerCreateOptions;
 use Evotic\SolusSDK\Interfaces\Servers\ISolusServerUpdateOptions;
 use Evotic\SolusSDK\SolusClient;
 
-class SolusServerActions {
+class SolusServers {
 
     private static function getClient(): SolusClient {
         return SolusClient::getInstance();
