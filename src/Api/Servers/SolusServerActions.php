@@ -2,6 +2,7 @@
 
 namespace Evotic\SolusSDK\Api\Servers;
 
+use Evotic\SolusSDK\Interfaces\Servers\ISolusServerResizeOptions;
 use Evotic\SolusSDK\SolusClient;
 
 class SolusServerActions {
@@ -83,16 +84,47 @@ class SolusServerActions {
     }
 
 
+    /**
+     * Resets the root password of a server
+     * 
+     * @param int $serverId
+     * @param bool $sendPasswordToCurrentUser
+     * 
+     * @return array
+     */
     public static function resetRootPassword(int $serverId, bool $sendPasswordToCurrentUser = false): array {
         return self::getClient()->post('/servers/' . $serverId . '/reset_password', [
             'send_password_to_current_user' => $sendPasswordToCurrentUser
         ]);
     }
 
+    /**
+     * Connect to the VNC of a server
+     * 
+     * @param int $serverId
+     * 
+     * @return array
+     */
     public static function connectToVNC(int $serverId): array {
         return self::getClient()->post('/servers/' . $serverId . '/vnc_up');
     }
 
-    // TODO: RESIZE SERVER
+    /**
+     * Resize a server
+     * 
+     * @param int $serverId
+     * @param ISolusServerResizeOptions $options
+     * 
+     * @return array
+     */
+    public static function resize(int $serverId, ISolusServerResizeOptions $options): array {
+        $data = [];
+
+        if ($options !== null) {
+            $data = array_merge($data, $options->toArray());
+        }
+
+        return self::getClient()->post('/servers/' . $serverId . '/resize', $data);
+    }
 
 }
