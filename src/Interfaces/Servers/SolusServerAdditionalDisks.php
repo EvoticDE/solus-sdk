@@ -1,6 +1,6 @@
 <?php
 
-namespace Evotic\SolusSDK\Interfaces\Servers\Backups;
+namespace Evotic\SolusSDK\Interfaces\Servers;
 
 interface ISolusServerAdditionalDisks {
 
