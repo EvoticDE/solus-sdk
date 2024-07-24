@@ -103,6 +103,10 @@ class SolusClient {
         return $this->request('DELETE', $path);
     }
 
+    public function deleteMultiple(string $path, array $data): array {
+        return $this->request('DELETE', $path, $data);
+    }
+
     public static function getInstance(): SolusClient {
         if (self::$instance === null) {
             self::$instance = new SolusClient(

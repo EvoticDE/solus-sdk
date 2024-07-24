@@ -159,7 +159,7 @@ class SolusServers {
      * @return array
      */
     public static function deleteMultipleAdditionalIps(int $serverId, array $ids, bool $delayed) {
-        return self::getClient()->post('/servers/' . $serverId . '/delete_additional_ips', [
+        return self::getClient()->deleteMultiple('/servers/' . $serverId . '/delete_additional_ips', [
             'ids' => $ids,
             'delayed' => $delayed
         ]);

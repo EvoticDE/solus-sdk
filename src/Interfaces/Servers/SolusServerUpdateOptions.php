@@ -1,6 +1,7 @@
 <?php
 
 namespace Evotic\SolusSDK\Interfaces\Servers;
+
 use Evotic\SolusSDK\Interfaces\Servers\Backups\ISolusServerBackupSettings;
 
 interface ISolusServerUpdateOptions {
