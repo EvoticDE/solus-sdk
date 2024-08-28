@@ -18,7 +18,7 @@ class SolusServerBackups {
      * @return array
      */
     public static function list(int $server_id): array {
-        return self::getClient()->get("server/$server_id/backups");
+        return self::getClient()->get("/server/$server_id/backups");
     }
 
     /**
@@ -29,7 +29,7 @@ class SolusServerBackups {
      * @return array
      */
     public function create(int $server_id): array {
-        return self::getClient()->post("server/$server_id/backups");
+        return self::getClient()->post("/server/$server_id/backups");
     }
 
 }

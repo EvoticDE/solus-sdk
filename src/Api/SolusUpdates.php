@@ -15,7 +15,7 @@ class SolusUpdates {
      * @return array
      */
     public static function list(): array {
-        return self::getClient()->get('updates');
+        return self::getClient()->get('/updates');
     }
 
     /**
@@ -25,7 +25,7 @@ class SolusUpdates {
      * @return array
      */
     public static function update(): array {
-        return self::getClient()->post('updates');
+        return self::getClient()->post('/updates');
     }
 
 }
